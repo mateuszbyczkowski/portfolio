@@ -14,7 +14,7 @@ html {
 
 body {
     width: 100%;
-    font-size:15px;
+    font-size: 3vh;;
     font-family:Lato,sans-serif;
     font-weight:300;
     color:#fff;
@@ -40,6 +40,7 @@ a, a:hover, a:visited{
 
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
     color: #FFF;
+    font-size:0.6em;
 }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
@@ -48,7 +49,7 @@ a, a:hover, a:visited{
 } 
 
 .navbar-brand {
-    font-size:15px;
+    font-size:0.6em;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -141,7 +142,7 @@ background-color: #848484;
     display: flex;
     justify-content: center;
     position: absolute;
-    top:40%;
+    top:44%;
     padding: 0;
     width: 100%;
     height: 12em;
@@ -158,7 +159,7 @@ background-color: #848484;
     
 /*STICKER TITLES*/
 .presentation-name{
-    font-size: 30px;
+    font-size: 1.4em;
     position: relative;  
     display: none;
     display:block;    
@@ -191,7 +192,7 @@ background-color: #848484;
     position: absolute;
     top: 90vh;
     left:48vw;
-    font-size: 2em;
+    font-size: 1.5em;
     display: none;
 }
 
@@ -208,35 +209,280 @@ background-color: #848484;
 /*ABOUT SECTION*/
 .about-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 10vh;
     text-align: center;
-    background: #eee;
+    /* IE10+ */ 
+    background-image: -ms-linear-gradient(top, #000000 0%, #404040 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #000000 0%, #404040 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #000000 0%, #404040 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000000), color-stop(100, #404040));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #000000 0%, #404040 100%);
+
+    /* W3C Markup */ 
+    background-image: linear-gradient(to bottom, #000000 0%, #404040 100%);
+}
+
+.article-content{
+    font-size: 1em;
+    text-align: center;
+    max-height: 85vh;
+    overflow: hidden;
+}
+
+#about-image {
+    width: 100%;
+    width:65vw;
+}
+
+@media(min-width:767px) {
+    .article-content{
+        font-size: 1.1em;
+        padding: 1em 0em 1em 0em;
+    }
+
+    #about-image {
+        max-width: 100%;
+        width: 30vw;
+    }
+
+    .text-animate {
+    webkit-animation: fadein 5s;
+    animation: fadein 5s;
+    }
+
+   @keyframes fadein{ 
+        0% {
+            opacity: 0;
+            -webkit-transform: perspective(200px) rotate3d(0,1,5,1deg);
+            transform: perspective(200px) rotate3d(1,0,1,1deg);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: perspective(100px) rotate3d(0,0,0,0);
+            transform: perspective(200px) rotate3d(0,0,0,0);
+        }
+    }
+}
+
+.article-content > p{
+    letter-spacing: 1px;
+    line-height: 1.3em;
+}
+
+.section-title {
+    font-size: 1.4em;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid white;
+    max-width: 8em;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.9);
+}
+
+.subsection-title{
+    font-size: 0.8em;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.9);
 }
 
 /*SKILLS SECTION*/
 .skills-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 10vh;
     text-align: center;
-    background: #fff;
+    /* IE10+ */ 
+    background-image: -ms-linear-gradient(top, #404040 5%, #000D38 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #404040 5%, #000D38 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #404040 5%, #000D38 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5, #404040), color-stop(100, #000D38));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #404040 5%, #000D38 100%);
+
+    /* W3C Markup */ 
+    background-image: linear-gradient(to bottom, #404040 5%, #000D38 100%);
+
+}
+
+.skills-list {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.technology-item{
+    margin: 0.4em;
+}
+
+@media(min-width:1200px) {
+    .skills-list{
+        flex-wrap: nowrap;
+    }
+
+    .technology-item{
+        margin: 1em;
+    }
+
+    .animate-twist {
+        webkit-animation: twist 2.5s;
+        animation: twist 2.5s;
+    }
+
+   @keyframes twist{ 
+   0% {
+    opacity: 0;
+    -webkit-transform: perspective(200px) rotate3d(1,1.75,0,115deg);
+    transform: perspective(200px) rotate3d(1,1.75,0,115deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: perspective(200px) rotate3d(0,0,0,0deg);
+        transform: perspective(200px) rotate3d(0,0,0,0deg);
+    }
+   }
+
+}
+
+.technology-item:hover{
+    transition: all 0.4s ease;
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari */
+    transform: scale(1.2);
+}
+
+.skills-list > .technology-item > p{
+    font-size: 0.6em;
+}
+
+.technology-icon {
+    max-height: 3em;
+    max-width: 3em;
 }
 
 /*PROJECTS-PORTFOLIO SECTION*/
 .projects-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 10vh;
     text-align: center;
-    background: #fff;
+    /* IE10+ */ 
+    background-image: -ms-linear-gradient(top, #000D38 5%, #8D9460 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #000D38 5%, #8D9460 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #000D38 5%, #8D9460 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5, #000D38), color-stop(100, #8D9460));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #000D38 5%, #8D9460 100%);
+
+    /* W3C Markup */ 
+    background-image: linear-gradient(to bottom, #000D38 5%, #8D9460 100%);
+}
+
+.project-template{
+    width: 30%;
+
 }
 
 /*CONTACT-LINKS SECTION*/
 .contact-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
     text-align: center;
-    background: #eee;
+    /* IE10+ */ 
+    background-image: -ms-linear-gradient(top, #8D9460 5%, #FFFAFA 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #8D9460 5%, #FFFAFA 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #8D9460 5%, #FFFAFA 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5, #8D9460), color-stop(100, #FFFAFA));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #8D9460 5%, #FFFAFA 100%);
+
+    /* W3C Markup */ 
+    background-image: linear-gradient(to bottom, #8D9460 5%, #FFFAFA 100%);
 }
 
+.contact-email:after {
+    content: "@gmail.com";
+}
+
+.contact-cv{
+    
+}
+
+.contact-cv-button{
+    position: relative;
+    width: 9em;
+    height: 2em;
+    margin-top:1em;
+    margin-bottom:1em;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
+    background-color: #2e4372;
+    background-image: linear-gradient(to top left,#2e4372,#78a);
+}
+
+#mail{
+    margin-top: 1.5em;
+}
+.contact-list {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    width: 15em;
+    margin-top: 2em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-links{
+    width: 7em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-image{
+    max-width: 100%;
+    max-height: 100%;
+    width: 358px;
+}
 
 /*OPACITY KEYFRAMES*/
 @-webkit-keyframes q {
