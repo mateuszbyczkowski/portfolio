@@ -1,6 +1,6 @@
 //slide sub-pages on mouse-scroll feature
 $(document).ready(function () {
-    var divs = $('.slide');
+    var divs = $('.slide-down');
     var dir = 'up'; // wheel scroll direction
     var div = 0; // current div
     $(document.body).on('DOMMouseScroll mousewheel', function (e) {
