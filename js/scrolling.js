@@ -36,6 +36,22 @@ $(document).ready(function () {
             else{
                  $(".technology-item" ).removeClass("animate-twist");       
             }
+        if(count==0){    
+             $("#about-text" ).addClass("text-animate");      
+            }
+            else{
+             $("#about-text" ).removeClass("text-animate");
+            }
+        if(count==2){    
+                $("#myCarousel" ).addClass("carousel-slide");      
+        }
+        else{
+             $("#myCarousel" ).removeClass("carousel-slide");   
+        }
+        if(count==3){
+            $("#left-img" ).addClass("figure-fix-left");   
+            $("#right-img" ).addClass("figure-fix-right");   
+        }
         return false;
     });
     $(window).resize(function () {
@@ -61,7 +77,7 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
         if($anchor.attr('href')=='#skills'){
-            $(".technology-item" ).addClass("animate-twist");      
+            $(".technology-item" ).delay(200).addClass("animate-twist");      
         }
         else{
              $(".technology-item" ).removeClass("animate-twist");   
@@ -72,6 +88,20 @@ $(function() {
         else{
              $("#about-text" ).removeClass("text-animate");   
         }
+        if($anchor.attr('href')=='#projects'){
+            $("#myCarousel" ).addClass("carousel-slide");      
+        }
+        else{
+             $("#myCarousel" ).removeClass("carousel-slide");   
+        }
+        if($anchor.attr('href')=='#contact'){
+            $("#left-img" ).delay(200).addClass("figure-fix-left");   
+            $("#right-img" ).delay(200).addClass("figure-fix-right");   
+        }
+        else{
+            $("#left-img" ).removeClass("figure-fix-left");   
+            $("#right-img" ).removeClass("figure-fix-right");      
+        }     
     });
 });
         
