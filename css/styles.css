@@ -40,7 +40,7 @@ a, a:hover, a:visited{
 
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
     color: #FFF;
-    font-size:0.6em;
+    font-size:0.8em;
 }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
@@ -49,7 +49,7 @@ a, a:hover, a:visited{
 } 
 
 .navbar-brand {
-    font-size:0.6em;
+    font-size:0.8em;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -80,7 +80,7 @@ background-color: #848484;
     }
 
     .navbar-nav>li>a:hover, .navbar-brand:hover {
-        transition: all 0.1s ease;
+        transition: all 0.3s ease;
         -ms-transform: scale(1.1); /* IE 9 */
         -webkit-transform: scale(1.1); /* Safari */
         transform: scale(1.1);
@@ -159,7 +159,7 @@ background-color: #848484;
     
 /*STICKER TITLES*/
 .presentation-name{
-    font-size: 1.4em;
+    font-size: 1.6em;
     position: relative;  
     display: none;
     display:block;    
@@ -235,7 +235,7 @@ background-color: #848484;
 
 @media(min-width:767px) {
     .article-content{
-        font-size: 1.1em;
+        font-size: 1.2em;
         padding: 1em 0em 1em 0em;
     }
 
@@ -245,8 +245,8 @@ background-color: #848484;
     }
 
     .text-animate {
-    webkit-animation: q 3s ease-in;
-    animation: q 3s ease-in;
+    webkit-animation: q 2s ease-in;
+    animation: q 2s ease-in;
     }
 }
 
@@ -256,7 +256,7 @@ background-color: #848484;
 }
 
 .section-title {
-    font-size: 1.4em;
+    font-size: 1.5em;
     padding-bottom: 0.2em;
     margin-bottom: 0.5em;
     border-bottom: 1px solid white;
@@ -267,7 +267,7 @@ background-color: #848484;
 }
 
 .subsection-title{
-    font-size: 0.8em;
+    font-size: 1em;
     padding-bottom: 0.2em;
     margin-bottom: 0.2em;
     text-shadow: 1px 1px 2px rgba(0,0,0,.9);
@@ -328,9 +328,9 @@ background-color: #848484;
 
    @keyframes twist{ 
    0% {
-    opacity: 0;
-    -webkit-transform: perspective(200px) rotate3d(1,1.75,0,115deg);
-    transform: perspective(200px) rotate3d(1,1.75,0,115deg);
+    opacity: 0.5;
+    -webkit-transform: perspective(200px) rotate3d(1,2,0,100deg);
+    transform: perspective(200px) rotate3d(1,2,0,100deg);
     }
     100% {
         opacity: 1;
@@ -356,12 +356,12 @@ background-color: #848484;
     max-width: 3em;
 }
 
-/*PROJECTS-PORTFOLIO SECTION*/
-.projects-section {
+/*CONTACT-LINKS SECTION*/
+.contact-section {
     height: 100%;
-    padding-top: 10vh;
+    padding-top: 100px;
     text-align: center;
-    /* IE10+ */ 
+   /* IE10+ */ 
     background-image: -ms-linear-gradient(top, #000D38 5%, #8D9460 100%);
 
     /* Mozilla Firefox */ 
@@ -378,38 +378,6 @@ background-color: #848484;
 
     /* W3C Markup */ 
     background-image: linear-gradient(to bottom, #000D38 5%, #8D9460 100%);
-}
-
-.vertical-center-projects{
-    margin-top: 15vh;
-}
-
-.project-images{
-    width:100%;
-}
-
-/*CONTACT-LINKS SECTION*/
-.contact-section {
-    height: 100%;
-    padding-top: 100px;
-    text-align: center;
-    /* IE10+ */ 
-    background-image: -ms-linear-gradient(top, #8D9460 5%, #FFFAFA 100%);
-
-    /* Mozilla Firefox */ 
-    background-image: -moz-linear-gradient(top, #8D9460 5%, #FFFAFA 100%);
-
-    /* Opera */ 
-    background-image: -o-linear-gradient(top, #8D9460 5%, #FFFAFA 100%);
-
-    /* Webkit (Safari/Chrome 10) */ 
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(5, #8D9460), color-stop(100, #FFFAFA));
-
-    /* Webkit (Chrome 11+) */ 
-    background-image: -webkit-linear-gradient(top, #8D9460 5%, #FFFAFA 100%);
-
-    /* W3C Markup */ 
-    background-image: linear-gradient(to bottom, #8D9460 5%, #FFFAFA 100%);
 }
 
 .contact-cv-button{
@@ -480,101 +448,6 @@ background-color: #848484;
     -ms-transform: scale(1.2); /* IE 9 */
     -webkit-transform: scale(1.2); /* Safari */
     transform: scale(1.2);
-}
-
-/*CAROUSEL PROPERTIES*/
-.carousel-control.left
-{
-    background: none;
-}
-.carousel-control.right
-{
-    background: none;
-}
-
-.carousel-control
-{
-    position: absolute;
-    top: 45%;
-    bottom: 0;
-    left: 0;
-    width: 15%;
-    font-size: auto;
-    color: #fff;
-    text-align: center;
-    opacity: 1;
-    text-shadow: none;
-}
-.carousel-control:hover
-{
-    color: #000;
-}
-.carousel-indicators
-{
-    bottom: -25px;
-}
-.carousel-indicators li
-{
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 1px;
-    text-indent: -999px;
-    cursor: pointer;
-    border: 1px solid #000D38;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0);
-}
-
-.carousel-indicators .active
-{
-    width: 12px;
-    height: 12px;
-    margin: 0;
-    background-color: #000D38;
-}
-
-.carousel-caption
-{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center;
-    
-}
-
-.item > img {
-    margin:auto;
-}
-
-.caption-background{
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgba(0,0,0,0.4);
-}
-
-@media(min-width: 1024px) {
-    .caption-background{
-        width: 70%;
-    }
-}
-
-.carousel-slide{
-    webkit-animation: w 1.5s ease-in;
-    animation: w 1.5s ease-in;
 }
 
 /*KEYFRAMES*/
