@@ -200,7 +200,7 @@ background-color: #848484;
 /*ABOUT SECTION*/
 .about-section {
     height: 100%;
-    padding-top: 10vh;
+    padding-top: 12vh;
     text-align: center;
     /* IE10+ */ 
     background-image: -ms-linear-gradient(top, #000000 0%, #404040 100%);
@@ -231,6 +231,8 @@ background-color: #848484;
 #about-image {
     width: 100%;
     width:65vw;
+    border: 5px solid white;
+    margin-top: 25px;
 }
 
 @media(min-width:767px) {
@@ -391,14 +393,7 @@ background-color: #848484;
     border: none;
     outline: 0;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
-    background-color: #2e4372;
-    background: -moz-linear-gradient(307deg, rgba(166,166,166,1) 0%, rgba(0,53,122,1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(166,166,166,1)), color-stop(100%, rgba(0,53,122,1))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(307deg, rgba(166,166,166,1) 0%, rgba(0,53,122,1) 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(307deg, rgba(166,166,166,1) 0%, rgba(0,53,122,1) 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(307deg, rgba(166,166,166,1) 0%, rgba(0,53,122,1) 100%); /* ie10+ */
-    background: linear-gradient(143deg, rgba(166,166,166,1) 0%, rgba(0,53,122,1) 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A6A6A6', endColorstr='#00357A',GradientType=0 ); /* ie6-9 */
+    background-color: darkslategrey;
 }
 
 .contact-cv-button:active{
