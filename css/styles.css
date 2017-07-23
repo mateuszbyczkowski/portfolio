@@ -232,7 +232,6 @@ background-color: #848484;
     width: 100%;
     width:65vw;
     border: 5px solid white;
-    margin-top: 25px;
 }
 
 @media(min-width:767px) {
