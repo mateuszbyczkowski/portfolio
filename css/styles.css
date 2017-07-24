@@ -224,7 +224,7 @@ background-color: #848484;
 .article-content{
     font-size: 1em;
     text-align: center;
-    max-height: 85vh;
+    /*max-height: 85vh;*/
     overflow: hidden;
 }
 
@@ -242,7 +242,7 @@ background-color: #848484;
 
     #about-image {
         max-width: 100%;
-        width: 30vw;
+        width: 25vw;
     }
 
     .text-animate {
