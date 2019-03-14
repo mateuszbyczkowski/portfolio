@@ -14,7 +14,7 @@ $(window).on('load', function() {
         setTimeout( function(){startTyping(text);}, 50 + Math.random() * 100)
         }
     }
-    startTyping("Mateusz Byczkowski - Junior Software Developer");
+    startTyping("Mateusz Byczkowski - Software Engineer");
  });
 
  //background video
